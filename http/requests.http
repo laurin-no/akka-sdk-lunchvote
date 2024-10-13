@@ -1,10 +1,5 @@
 ### introduce area
 POST localhost:9000/area/org1/area51/introduce
-#Content-Type: application/json
-#
-#{
-#  "value": 10
-#}
 
 ### get area
 GET localhost:9000/area/org1/area51
@@ -14,3 +9,6 @@ POST localhost:9000/area/org1/area51/place/place2/introduce
 
 ### archive place
 POST localhost:9000/area/org1/area51/place/place1/archive
+
+### get areas for an organization
+GET localhost:9000/areas/org1
