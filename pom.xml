@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>io.kalix</groupId>
-    <artifactId>kalix-spring-boot-parent</artifactId>
-    <version>1.5.2</version>
-  </parent>
-  
-  <groupId>com.example</groupId>
-  <artifactId>kalix-codefirst-lunchvote</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <name>kalix-codefirst-lunchvote</name>
+    <parent>
+        <groupId>io.akka</groupId>
+        <artifactId>akka-javasdk-parent</artifactId>
+        <version>3.0.0-M7</version>
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>akka-sdk-lunchvote</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>akka-sdk-lunchvote</name>
     <properties>
+        <!-- For Docker setup see https://docs.kalix.io/projects/container-registries.html -->
+        <container.registry>kcr.us-east-1.kalix.io</container.registry>
+        <organization>acme</organization>
+        <jdk.version>21</jdk.version>
+    </properties>
 
-    <!-- For Docker setup see https://docs.kalix.io/projects/container-registries.html -->
-    <kalixContainerRegistry>kcr.us-east-1.kalix.io</kalixContainerRegistry>
-    <kalixOrganization>acme</kalixOrganization>
-    <mainClass>com.example.lunchvote.Main</mainClass>
+    <repositories>
+        <repository>
+            <id>akka-repository</id>
+            <name>Akka Repository</name>
+            <url>https://repo.akka.io/maven</url>
+        </repository>
+    </repositories>
 
-  </properties>
-
-  <dependencies>
-    <!-- Your dependencies go here -->
-  </dependencies>
+    <dependencies>
+        <!-- Your dependencies go here -->
+    </dependencies>
 </project>

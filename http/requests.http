@@ -1,14 +1,34 @@
 ### introduce area
-POST localhost:9000/area/org1/area51/introduce
+POST localhost:9000/area
+Content-Type: application/json
+
+{
+  "organizationId": "org1",
+  "areaId": "area52"
+}
 
 ### get area
 GET localhost:9000/area/org1/area51
 
 ### introduce place
-POST localhost:9000/area/org1/area51/place/place2/introduce
+PUT localhost:9000/area/introduce-place
+Content-Type: application/json
+
+{
+  "organizationId": "org1",
+  "areaId": "area51",
+  "placeId": "place2"
+}
 
 ### archive place
-POST localhost:9000/area/org1/area51/place/place1/archive
+PUT localhost:9000/area/archive-place
+Content-Type: application/json
+
+{
+  "organizationId": "org1",
+  "areaId": "area51",
+  "placeId": "place1"
+}
 
 ### get areas for an organization
-GET localhost:9000/areas/org1
+GET localhost:9000/area-view/by-organization/org1
